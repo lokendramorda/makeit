@@ -31,10 +31,10 @@ const Search = ({ properties }) => {
         <Icon paddingLeft='2' w='7' as={BsFilter} />
       </Flex>
       {searchFilters && <SearchFilters />}
-      <Text fontSize='2xl' p='4' fontWeight='bold'>
+      <Text fontSize='2xl' p='4' fontWeight='bold' bg="blue.300" color="white" mb="10" mt="5" w="20%"  borderRadius="0 10px 10px 0">
         Properties {router.query.purpose}
       </Text>
-      <Flex flexWrap='wrap'>
+      <Flex flexWrap='wrap' justifyContent='center' alignItems='center'>
         {properties.map((property) => <Property property={property} key={property.id} />)}
       </Flex>
       {properties.length === 0 && (
